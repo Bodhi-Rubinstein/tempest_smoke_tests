@@ -38,19 +38,7 @@ echo "  Name: $NAME"
 echo "  Regex: $REGEX"
 echo "  Dry Run: $DRY_RUN"
 
-# 1. Install tempest if not present (simplified check)
-if ! command -v tempest &> /dev/null; then
-    echo "Tempest not found. Installing..."
-    if [ "$DRY_RUN" = false ]; then
-        pip install .
-    else
-        echo "[Dry Run] Would run: pip install ."
-    fi
-else
-    echo "Tempest is already installed."
-fi
-
-# 2. Decrypt accounts file
+# 1. Decrypt accounts file
 echo "Decrypting accounts file..."
 export SECRET_PASSPHRASE="$ACCOUNTS_PASSPHRASE"
 if [ "$DRY_RUN" = false ]; then

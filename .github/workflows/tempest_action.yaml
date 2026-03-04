@@ -34,10 +34,9 @@ jobs:
       artifact_name: "${{inputs.name}}-ctrf-report"
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v5
         with:
           python-version: '3.13'
-          cache: 'pip'
       - name: execute smoke tests script
         id: tempest_run_tests
         continue-on-error: true
@@ -49,7 +48,7 @@ jobs:
           if [[ -n "${{inputs.regex}}" ]]; then
             ARGS+=(--regex "${{inputs.regex}}")
           fi
-          ./run_smoke_tests.sh "${ARGS[@]}"
+          uv run --frozen ./run_smoke_tests.sh "${ARGS[@]}"
 
 
       - name: Publish Test Report
