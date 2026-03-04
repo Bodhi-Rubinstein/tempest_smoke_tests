@@ -1111,7 +1111,7 @@ wheels = [
 
 [[package]]
 name = "tempest"
-version = "46.1.1"
+version = "46.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cliff" },
@@ -1138,9 +1138,9 @@ dependencies = [
     { name = "testtools" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/2e/51/a86a0f9b6c2c3a63bb8bbdb313910800002e87c3be418d084729625939a2/tempest-46.1.1.tar.gz", hash = "sha256:13ad63aa3d16cb57fcd5a724a059e7119236502c3bd18206631400d4c13efb15", size = 1180447, upload-time = "2026-02-26T09:25:45.654Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/15/42/522c0ec52a716736df0d70963b7b2c0e3064a243468f324023f903b2c825/tempest-46.0.0.tar.gz", hash = "sha256:75d9b5384ec10f00cce13f46201d3ea8af16bd4ffe682f850481960e6dce6c73", size = 1172210, upload-time = "2025-11-13T13:45:30.319Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d3/72/ca405237cccccf816813c92ebff7568c6ef6a12e12ca8d005ca723a8c2c2/tempest-46.1.1-py3-none-any.whl", hash = "sha256:26cb62de7a520e3dd7293d4c5bd1ba99940bb482d4a4f1b60cad2e001dfc1cc7", size = 1624051, upload-time = "2026-02-26T09:25:43.372Z" },
+    { url = "https://files.pythonhosted.org/packages/9a/81/98fe3f4c93606ec07cd011be1b1b058399dfb79165e2698d7f651a99665f/tempest-46.0.0-py3-none-any.whl", hash = "sha256:99d45e63958c967167e68942095f8f64dbf247ff97c6458933f8b49923364297", size = 1613625, upload-time = "2025-11-13T13:45:28.108Z" },
 ]
 
 [[package]]
@@ -1161,7 +1161,7 @@ requires-dist = [
     { name = "blazar-tempest-plugin", git = "https://github.com/chameleoncloud/chi-blazar-tempest-plugin" },
     { name = "manila-tempest-plugin" },
     { name = "pydantic" },
-    { name = "tempest" },
+    { name = "tempest", specifier = "==46.0.0" },
     { name = "urllib3", specifier = "~=2.5.0" },
     { name = "zun-tempest-plugin" },
 ]
