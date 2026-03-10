@@ -98,7 +98,7 @@ wheels = [
 [[package]]
 name = "blazar-tempest-plugin"
 version = "0.1.0"
-source = { git = "https://github.com/chameleoncloud/chi-blazar-tempest-plugin#cebca75a383c76a9788c1f237757b712032e9ac1" }
+source = { git = "https://github.com/chameleoncloud/chi-blazar-tempest-plugin#abe373dcaf5a43b711fc0c2c3981ecf3d8bb6759" }
 dependencies = [
     { name = "keystoneauth1" },
     { name = "tempest" },
